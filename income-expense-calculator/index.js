@@ -47,6 +47,7 @@ $submit.addEventListener("click", () => {
   clearForm();
 });
 
+// Fetch the list of Income / Expenses data based on the selected filter
 const fetchEntries = () => {
   $entries.innerHTML = "";
   let totalIncome = 0;
@@ -89,6 +90,7 @@ const clearForm = () => {
   $type.value = "income";
 };
 
+// Edit the entry
 const editItem = (id) => {
   const item = list.find((li) => li.id === id);
 
@@ -103,10 +105,18 @@ const editItem = (id) => {
   deleteItem(id);
 };
 
+// Deleting the entry
 const deleteItem = (id) => {
   list = list.filter((entry) => entry.id !== id);
   saveToLocalStorage();
   fetchEntries();
+
+  // updating the totals on deleting the last item
+  if (!list.length) {
+    $totalIncome.textContent = 0.0;
+    $totalExpense.textContent = 0.0;
+    $balance.textContent = 0.0;
+  }
 };
 
 // Handle filter type change
