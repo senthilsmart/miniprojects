@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Income Expense Calculator</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Income & Expense Tracker</h1>
+    <div class="summary">
+      <p>Total Income: <span id="tot-income">0</span></p>
+      <p>Total Expense: <span id="tot-expense">0</span></p>
+      <p>Balance: <span id="balance">0</span></p>
+    </div>
+    <div class="filter">
+      <label for="filter-type">Filter by:</label>
+      <select id="filter-type">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+    </div>
+    <div class="form">
+      <input type="text" id="description" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button id="add-btn">Add Income/Expense</button>
+    </div>
+    <ul id="list">
+
+    </ul>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
