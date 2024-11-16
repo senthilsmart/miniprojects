@@ -15,7 +15,7 @@ The project implements CRUD operations (Create, Read, Update, Delete) and persis
 
 1. **Clone or Download the repository:**
 ```bash
-git clone https://github.com/your-username/income-expense-calculator.git
+git clone https://github.com/senthilsmart/miniprojects.git
 ```
 
 2. Open the project folder and double-click index.html to open the app in your browser.
